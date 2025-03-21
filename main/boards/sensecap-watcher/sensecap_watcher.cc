@@ -174,7 +174,7 @@ private:
         ESP_ERROR_CHECK(spi_bus_initialize(SPI3_HOST, &qspi_cfg, SPI_DMA_CH_AUTO));
     }
 
-    void Initializespd2010Display() {
+    void InitializeSpd2010Display() {
         ESP_LOGI(TAG, "Install panel IO");
         const esp_lcd_panel_io_spi_config_t io_config = {
             .cs_gpio_num = BSP_LCD_SPI_CS,
@@ -250,7 +250,7 @@ public:
         InitializeSpi();
         InitializeExpander();
         InitializeButton();
-        Initializespd2010Display();
+        InitializeSpd2010Display();
         InitializeIot();
         GetBacklight()->RestoreBrightness();
     }
